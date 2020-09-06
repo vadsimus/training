@@ -3,7 +3,7 @@ import random
 import copy
 
 class SimpleIterator(Iterator):
-    _position: int = None
+    # _position: int = None
 
     def __init__(self, collection):
         self.collection = collection
@@ -18,8 +18,8 @@ class SimpleIterator(Iterator):
         return value
 
 
-class OddIterator(Iterator):
-    _position: int = None
+class OddIterator:
+    # _position: int = None
 
     def __init__(self, collection):
         self.collection = collection
@@ -33,9 +33,12 @@ class OddIterator(Iterator):
             raise StopIteration()
         return value
 
+    def __iter__(self):
+        return self
 
-class RevIterator(Iterator):
-    _position: int = None
+
+class RevIterator:
+    # _position: int = None
 
     def __init__(self, collection):
         self.collection = collection
@@ -49,8 +52,11 @@ class RevIterator(Iterator):
             raise StopIteration()
         return value
 
+    def __iter__(self):
+        return self
 
-class RandomIterator(Iterator):
+
+class RandomIterator:
     _position: int = None
 
     def __init__(self, collection):
@@ -68,8 +74,11 @@ class RandomIterator(Iterator):
             raise StopIteration()
         return value
 
+    def __iter__(self):
+        return self
 
-class Collection(Iterable):
+
+class Collection:
     def __init__(self, collection, itr):
         self._collection = collection
         self._itr = itr
@@ -88,4 +97,4 @@ print(','.join(c))
 print(','.join(c2))
 print(','.join(c3))
 print(','.join(c4))
-print(','.join(c))
+print(','.join(c1))

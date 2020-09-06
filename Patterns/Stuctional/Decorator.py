@@ -1,14 +1,17 @@
 class Component:
     def operation(self):
-        print('Component operation')
+        pass
 
 
 class C1(Component):
     def __init__(self, mark):
         self.mark = mark
 
+    def operation(self):
+        print('Component operation')
 
-class Decorator:
+
+class Decorator(Component):
     def __init__(self, comp):
         self.component = comp
 

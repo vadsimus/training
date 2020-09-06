@@ -2,7 +2,7 @@ import random
 
 
 class Originator:
-    _state = None
+    # _state = None
 
     def __init__(self, initial):
         self._state = initial

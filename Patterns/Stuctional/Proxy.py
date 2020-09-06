@@ -5,7 +5,7 @@ class Databse:
 
 class RealDatabase(Databse):
     def get_result(self, parameter):
-        return f'calculated result from {parameter}'
+        return f'calculated result from db{parameter}'
 
 
 class ProxyDtabase(Databse):

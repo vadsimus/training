@@ -30,6 +30,8 @@ class Builder1(Builder):
     def produce_c(self):
         self._product.add('Part_C1')
         return self
+
+
 class Product1:
     def __init__(self):
         self.parts = []
@@ -40,6 +42,7 @@ class Product1:
     def list_parts(self):
         print(f'Product parts: {",".join(self.parts)}', end='')
 
+
 class Director:
     def __init__(self, builder):
         self.builder = builder
@@ -48,9 +51,8 @@ class Director:
         self.builder.produce_a()
 
     def get_maximal(self):
-        self.builder.produce_a()
-        self.builder.produce_b()
-        self.builder.produce_c()
+        self.builder.produce_a().produce_b().produce_c()
+
 
 if __name__ == '__main__':
     b = Builder1()
