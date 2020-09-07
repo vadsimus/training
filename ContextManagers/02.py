@@ -5,7 +5,6 @@ class TimeCalc:
     def __init__(self):
         self.now = None
 
-
     def __enter__(self):
         self.now = datetime.now()
         return self.now
@@ -21,5 +20,3 @@ with TimeCalc() as g:
     inp = input('press something...')
     if inp == 'password':
         raise Exception
-
-
